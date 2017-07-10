@@ -52,19 +52,6 @@
 
     </div>
 
-
-    <div th:if="${jobs2} and ${jobs2.size()}">
-        <h2 th:text="${jobs2.size()} + ' Result(s)'"></h2>
-
-        <div th:each="job, idx: ${jobs2}">
-            <table class="job-listing">
-        <tr th:each="item, idx: ${job}" th:class="${idx.odd} ? 'odd'">
-            <td th:text="${item.key}"></td>
-            <td th:text="${item.value}"></td>
-        </tr></table>
-        </div>
-
-    </div>
 </div>
 
 </body>

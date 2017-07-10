@@ -13,14 +13,13 @@
     <!-- TODO #3 - Use the same list display from search.html -->
     <div th:if="${jobs} and ${jobs.size()}">
 
-        <table>
-            <tr th:each="job, idx: ${jobs}" th:class="${idx.odd} ? 'odd'">
-            <tr th:each="item: ${job}">
+        <div th:each="job: ${jobs}">
+        <table class="job-listing">
+            <tr th:each="item, idx: ${job}" th:class="${idx.odd} ? 'odd'">
                     <td th:text="${item.key}"></td>
                     <td th:text="${item.value}"></td>
                 </tr>
-            </tr>
-        </table>
+        </table></div>
 
     </div>
 </div>
